@@ -1,11 +1,56 @@
 import logo from "../resources/league-of-legends.svg";
 import styled from "styled-components";
 
+const HeaderTag = styled.header`
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  @media only screen and (min-width: 600px) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+`;
+
+const Image = styled.img`
+  height: auto;
+  padding-bottom: 0.5rem;
+
+  @media only screen and (max-width: 600px) {
+    width: 3.5rem;
+  }
+  @media only screen and (min-width: 600px) {
+  }
+  @media only screen and (min-width: 992px) {
+    width: 4.5rem;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 5rem;
+  }
+`;
+
 const ContainerSearch = styled.div`
   display: flex;
   position: relative;
-  width: 310px;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 0rem;
+    width: 20rem;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 25rem;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 30rem;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 30rem;
+  }
 
   input {
     width: 100%;
@@ -18,7 +63,7 @@ const ContainerSearch = styled.div`
     color: white;
     outline: none;
 
-    @media (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       padding-left: 0.5rem;
     }
   }
@@ -37,25 +82,6 @@ const ContainerSearch = styled.div`
     outline: none;
     cursor: pointer;
   }
-`;
-
-const HeaderTag = styled.header`
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid white;
-  margin-left: 4rem;
-  margin-right: 4rem;
-
-  @media (max-width: 600px) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-`;
-
-const Image = styled.img`
-  height: auto;
-  width: 3.5rem;
-  padding-bottom: 0.5rem;
 `;
 
 const Header = () => {
