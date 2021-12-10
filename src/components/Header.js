@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ContainerSearch = styled.div`
   display: flex;
   position: relative;
-  width: 250px;
+  width: 310px;
   padding-left: 1rem;
 
   input {
@@ -17,7 +17,10 @@ const ContainerSearch = styled.div`
     background-color: #1e2328;
     color: white;
     outline: none;
-    
+
+    @media (max-width: 600px) {
+      padding-left: 0.5rem;
+    }
   }
 
   select {
@@ -42,14 +45,17 @@ const HeaderTag = styled.header`
   border-bottom: 1px solid white;
   margin-left: 4rem;
   margin-right: 4rem;
+
+  @media (max-width: 600px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 const Image = styled.img`
-    height: auto;
-    width: 3.5rem;
-    padding-bottom: 0.5rem;
-
-
+  height: auto;
+  width: 3.5rem;
+  padding-bottom: 0.5rem;
 `;
 
 const Header = () => {
@@ -57,7 +63,11 @@ const Header = () => {
     <HeaderTag>
       <Image src={logo} alt="Logo Lol" />
       <ContainerSearch>
-        <input type="text" placeholder="Enter a summoner name" />
+        <input
+          type="text"
+          placeholder="  Enter a summoner name"
+          maxLength="30"
+        />
         <select>
           <option>LAN</option>
           <option>LAS</option>
