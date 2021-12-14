@@ -1,13 +1,22 @@
 import React from "react";
-import { ContainerTitleImage, Title, Image } from "./TextFieldImage.styled";
+import {
+  ContainerTitleImage,
+  Title,
+  ContainerImage,
+  Image,
+  BackgroundColorImage,
+} from "./TextFieldImage.styled";
 
-const TextFieldImage = ({championImg}) => {
+const TextFieldImage = ({ championImg }) => {
   return (
     <ContainerTitleImage>
       <Title>
         Your <br /> History <br /> In one place
       </Title>
-      <Image src={championImg} alt="Image of a champion" />
+      <ContainerImage>
+        <Image src={championImg} alt="Champion Logo"/>
+        <BackgroundColorImage></BackgroundColorImage>
+      </ContainerImage>
     </ContainerTitleImage>
   );
 };
